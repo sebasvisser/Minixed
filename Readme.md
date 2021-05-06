@@ -37,11 +37,16 @@ some placeholders that will be *parsed* at runtime:
 
 	$title = 'Index of {{path}}';
 	$subtitle = '{{files}} objects in this folder, {{size}} total'; // Empty to disable
-	
+
+You can make breadcrumb links if titles contain `{{path}}`, useful when navigating into subfolders:
+
+	$breadcrumbs = true; // Make links in {{path}}
+
 You can tell the script how to build the files list using:
 	
 	$showParent = false; // Display a (parent directory) link
 	$showDirectories = true;
+	$showDirectoriesFirst = true; // Lists directories first when sorting by name
 	$showHiddenFiles = false; // Display files starting with "." too
 	
 And how that list should look:
